@@ -1,17 +1,23 @@
-name: Build and Deploy Vue Application to Github Pages
-on: 
-    push:
-        branches:
-            -main
-jobs:         
-  build_deploy_vue:
+name: Deploy to github pages
+on:
+  push:
+    branches:
+      - master
+jobs:
+  gh-pages-deploy:
+    name: Deploying to gh-pages
     runs-on: ubuntu-latest
-    name: Build and Deploy Vue
     steps:
-    - uses: actions/checkout@v2
-    - id: Build-Deploy-Vue
-      uses: thefrustrateddev/vue-deploy-github-pages@v1.0.0
-      with:
-        username: 'mavilam'
-        reponame: 'sleepy-eyes-front'
-        token: ${{ secrets.GITHUB_TOKEN }} 
+      - name: Setup Node.js for use with actions
+        uses: actions/setup-node@v2
+        with:
+          version:  16.x
+      - name: Checkout branch
+        uses: actions/checkout@v2
+       - name: Clean install dependencies
+         run: npm ci
+
+      - name: Run deploy script
+        run: |
+          git config user.name "mavilam" && git config user.email "soyer893@gmail.com"
+          npm run gh-pages-deploy
