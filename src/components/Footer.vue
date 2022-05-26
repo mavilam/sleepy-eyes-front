@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="flex justify-center">
-      <a href="#!" class="m-6 text-gray-600">
+      <a href="#!" class="m-6 text-gray">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="w-5" role="img"
           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path fill="currentColor"
@@ -9,7 +9,7 @@
           </path>
         </svg>
       </a>
-      <a href="#!" class="m-6 text-gray-600">
+      <a href="#!" class="m-6 text-gray">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="w-5" role="img"
           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path fill="currentColor"
@@ -19,8 +19,8 @@
       </a>
     </div>
     <div class="m8">
-      <div class="bg-gray-600">
-        <p class="text-sm xl:text-md text-white">
+      <div class="bg-gray">
+        <p class="text-sm xl:text-md text-bone font-medium">
           © 2020 Copyright: sleepy eyes
         </p>
       </div>

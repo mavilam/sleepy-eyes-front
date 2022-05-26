@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen">  
+  <div class="flex flex-col h-screen bg-bone">  
     <Content class="flex-grow"/>
     <Footer/>
   </div>
