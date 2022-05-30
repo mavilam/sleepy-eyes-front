@@ -21,7 +21,7 @@
     <div class="m8">
       <div class="bg-gray">
         <p class="text-sm xl:text-md text-bone font-medium">
-          © 2020 Copyright: sleepy eyes
+          {{ year }}
         </p>
       </div>
     </div>
@@ -29,6 +29,14 @@
 </template>
 
 <script>
+  export default {
+    name: 'Footer',
+    data() {
+      return {
+        year: `© ${new Date().getFullYear()} Copyright: sleepy eyes`	
+      }
+    }
+  }	
 </script>
 
 <style scoped>
