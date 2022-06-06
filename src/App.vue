@@ -18,14 +18,12 @@ export default {
   },
   methods: {
     setViewHeight: function() {
-      console.log("hey")
       let vh = window.innerHeight * 0.01
       document.documentElement.style.setProperty('--vh', `${vh}px`)
     },
   },
   mounted: function() {
     this.setViewHeight()
-    console.log("soul sister")
     window.addEventListener('resize', () => {
       this.setViewHeight()
     })
