@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="flex justify-center">
-      <a href="https://www.instagram.com/sleepyeyesbusymind__/" class="m-6 text-gray">
+      <a href="https://www.instagram.com/sleepyeyesbusymind__/" target="_blank" class="m-6 text-gray">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="w-5" role="img"
           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path fill="currentColor"
@@ -9,7 +9,7 @@
           </path>
         </svg>
       </a>
-      <a href="https://www.tiktok.com/@sleepyeyes.busymind" class="m-6 text-gray">
+      <a href="https://www.tiktok.com/@sleepyeyes.busymind" target="_blank" class="m-6 text-gray">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="tik tok" class="w-5" 
           viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
           <path fill="currentColor"
