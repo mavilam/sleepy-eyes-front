@@ -1,12 +1,11 @@
 <template>
-  <div class="flex flex-col h-screen bg-bone">  
+  <div class="flex flex-col h-screen bg-bone" :class="color">
     <Content class="flex-grow"/>
-    <Footer/>
+    <Footer :bg-color="bgColor"/>
   </div>
 </template>
 
 <script>
-import Header from '././components/Header.vue'
 import Content from '././components/Content.vue'
 import Footer from '././components/Footer.vue'
 
@@ -16,13 +15,31 @@ export default {
     Content,
     Footer
   },
+  data() {
+    return {
+      colorArray: ['text-blue', 'text-green', 'text-orange', 'text-purple', 'text-brown', 'text-olive'],
+      color: 'green',
+      bgColor: 'bg-green'
+    }
+  },
   methods: {
     setViewHeight: function() {
       let vh = window.innerHeight * 0.01
       document.documentElement.style.setProperty('--vh', `${vh}px`)
     },
+    changeColor: function() {
+      let random = Math.floor(Math.random() * this.colorArray.length)
+      this.color = `${this.colorArray[random]}`
+      console.log(this.color)
+      this.setBgColor()
+    },
+    setBgColor: function() {
+      this.bgColor = this.color.replace('text', 'bg')
+    }
   },
   mounted: function() {
+    this.changeColor()
+    this.setBgColor()
     this.setViewHeight()
     window.addEventListener('resize', () => {
       this.setViewHeight()
