@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col h-screen bg-bone" :class="color">
-    <Content class="flex-grow"/>
+    <Content/>
     <Footer :bg-color="bgColor"/>
   </div>
 </template>

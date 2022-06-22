@@ -18,8 +18,8 @@
       </a>
     </div>
     <div class="m8">
-      <div :class="bgColor">
-        <p class="text-sm xl:text-md text-bone font-medium">
+      <div>
+        <p class="text-sm xl:text-md font-medium">
           {{ year }}
         </p>
       </div>
