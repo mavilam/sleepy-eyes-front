@@ -16,7 +16,7 @@
     </svg>
     <div class="font-bold pt-3 sm:pt-12 lg:txt-xl text-lg">
       <p>Se vienen cositas.</p>
-      <p>Si quieres estar al día, stay tuned:</p>
+      <p>Stay tuned:</p>
     </div>
     <div class="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
       <div
