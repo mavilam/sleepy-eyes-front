@@ -33,7 +33,7 @@
           class="flex-shrink-0 px-4 py-2 text-base text-bone font-semibold  rounded-lg shadow-md focus:outline-none"
           :class="bgColor"
           @click="suscribe()"
-          :disabled="disableSuscribe">
+          :disabled="disableSuscribe || suscribed">
           {{suscribeButtonText}}
         </button>
         <div class="flex-shrink-0 px-4 py-2 drop-shadow-md">
@@ -72,6 +72,7 @@ export default {
         error: '',
         suscribeButtonText: 'Suscríbete',
         isSuscribing: false,
+        suscribed: false,
         disableSuscribe: false
       }
     },
@@ -93,6 +94,7 @@ export default {
           console.log("éxito")
           this.isSuscribing = false
           this.error = ''
+          this.suscribed = true
           this.suscribeButtonText = 'Éxito!'
         })
         .catch(error => {
