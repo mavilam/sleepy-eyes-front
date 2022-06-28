@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-screen" :class="color">
-    <Content class="basis-3/4"/>
-    <Footer class="basis-1/12" :bg-color="bgColor"/>
+    <Content class="basis-3/4" :bg-color="bgColor"/>
+    <Footer class="basis-1/5"/>
   </div>
 </template>
 

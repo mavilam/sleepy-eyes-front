@@ -1,7 +1,7 @@
 <template>
-  <div class="flex justify-center items-center h-screen h-5/6">
+  <div class="flex flex-col justify-center items-center h-screen">
     <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-      class="w-9/12 xl:w-4/12 lg:w-6/12" viewBox="0, 0, 400,230">
+      class="w-9/12 xl:w-4/12 lg:w-6/12 basis-2/5 lg:basis-4/6" viewBox="0, 0, 400,230">
       <g id="svgg">
         <path id="path0"
           d="M207.833 203.695 C 206.347 204.691,206.212 206.271,207.504 207.542 C 209.412 209.419,211.611 207.623,210.833 204.821 C 210.464 203.495,208.969 202.934,207.833 203.695 "
@@ -14,10 +14,96 @@
         <path id="path4" d="" stroke="none" fill="currentColor" fill-rule="evenodd"></path>
       </g>
     </svg>
+    <div class="font-bold pt-3 sm:pt-12 lg:txt-xl text-lg">
+      <p>Se vienen cositas.</p>
+      <p>Si quieres estar al día, stay tuned:</p>
+    </div>
+    <div class="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
+      <div
+        class="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center">
+        <div class="relative">
+          <input type="text" id="form-subscribe-Subscribe"
+            class="rounded-lg border-transparent flex-1 appearance-none border w-full py-2 px-4 bg-bone placeholder-black shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-grey-500 focus:ring-grey-600 focus:border-transparent"
+            placeholder="you@hola.com" 
+            v-model="subEmail"
+            @input="checkMail()" />
+        </div>
+        <button
+          v-if="!isSuscribing"
+          class="flex-shrink-0 px-4 py-2 text-base text-bone font-semibold  rounded-lg shadow-md focus:outline-none"
+          :class="bgColor"
+          @click="suscribe()"
+          :disabled="disableSuscribe">
+          {{suscribeButtonText}}
+        </button>
+        <div class="flex-shrink-0 px-4 py-2 drop-shadow-md">
+          <pulse-loader :loading="isSuscribing" color="#F6F4EA"></pulse-loader>
+        </div>
+      </div>
+    </div>
+    <p class="font-bold pt-3 sm:pt-12 lg:txt-xl text-lg">{{ error }}</p>
   </div>
+  
+  
+
 </template>
 
 <script>
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+import axios from 'axios'
+
+export default {
+    name: 'Content',
+    components: {
+      PulseLoader
+    },
+    props: {
+        'bgColor': {
+            type: String,
+            default: 'bg-bone'
+        }
+    },
+    data() {
+      return {
+        evadeCorsURL: 'https://jorgeatgu-cors.herokuapp.com/',
+        mailChimpBaseUrl: 'https://xyz.us11.list-manage.com/subscribe/post?u=554bac955bf742500ebe1bf7f&amp;id=bdb9294df2',
+        subEmail: '',
+        bgColorsCatalog: ['bg-blue', 'bg-green', 'bg-orange', 'bg-purple', 'bg-brown', 'bg-olive'],
+        error: '',
+        suscribeButtonText: 'Suscríbete',
+        isSuscribing: false,
+        disableSuscribe: false
+      }
+    },
+    methods: {
+      checkMail() {
+        const emailRegexp = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.{1}[a-zA-Z0-9-]+)$/
+        if (emailRegexp.test(this.subEmail)) this.disableSuscribe = false
+        else this.disableSuscribe = true
+      },
+      suscribe() {
+        if (this.subEmail === '') return
+        this.isSuscribing = true
+        axios.get(`${this.evadeCorsURL}${this.mailChimpBaseUrl}`, {
+          params: {
+            EMAIL: encodeURI(this.subEmail)
+          }
+        })
+        .then(response => {
+          console.log("éxito")
+          this.isSuscribing = false
+          this.error = ''
+          this.suscribeButtonText = 'Éxito!'
+        })
+        .catch(error => {
+          this.isSuscribing = false
+          this.error = 'Ups, se nos ha roto por algún lado.'
+          console.log(error)
+        })
+      }
+
+    }
+  }
 </script>
 
 <style scoped>

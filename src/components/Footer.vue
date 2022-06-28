@@ -30,12 +30,6 @@
 <script>
   export default {
     name: 'Footer',
-    props: {
-        'bgColor': {
-            type: String,
-            default: 'bg-bone'
-        }
-    },
     data() {
       return {
         bgColorsCatalog: ['bg-blue', 'bg-green', 'bg-orange', 'bg-purple', 'bg-brown', 'bg-olive'],
