@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen" :class="color">
+  <div class="flex flex-col h-screen font-bitter" :class="color">
     <Content class="basis-3/4" :bg-color="bgColor"/>
     <Footer class="basis-1/5"/>
   </div>
@@ -46,13 +46,12 @@ export default {
     })
   }
 }
-
-
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 #app {
-  font-family: "Lato", sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'bitter': ['Bitter', 'serif'],
+    },
     colors: {
       'bone': '#F6F4EA',
       'blue': '#274e55',

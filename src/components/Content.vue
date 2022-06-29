@@ -41,6 +41,7 @@
         </div>
       </div>
     </div>
+    <p class="px-12 pt-1 md:pt-6 text-xs">Suscribiendote confirmas que estás de acuerdo con la <a class="underline underline-offset-1" href="https://mailchimp.com/legal/terms" target="_blank">política de privacidad</a>.</p>
     <p class="font-bold pt-3 sm:pt-12 lg:txt-xl text-lg">{{ error }}</p>
   </div>
   
@@ -99,7 +100,7 @@ export default {
         })
         .catch(error => {
           this.isSuscribing = false
-          this.error = 'Ups, se nos ha roto por algún lado.'
+          this.error = 'Ups, se nos ha roto por algún lado. Prueba más tarde, por favor.'
           console.log(error)
         })
       }
