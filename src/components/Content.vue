@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col justify-center items-center h-screen">
-    <Logo />
+    <Logo class="pt-12 w-9/12 xl:w-4/12 lg:w-6/12 basis-2/5 lg:basis-4/6" />
     <div class="font-bold pt-3 sm:pt-12 lg:txt-xl text-lg">
       <p>Se vienen cositas.</p>
       <p>Stay tuned:</p>
@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <p class="px-12 pt-1 md:pt-6 text-xs">Suscribiendote confirmas que estás de acuerdo con la <a class="underline underline-offset-1" href="https://mailchimp.com/legal/terms" target="_blank">política de privacidad</a>.</p>
+    <p class="px-12 pt-1 md:pt-6 text-xs">Suscribiéndote confirmas que estás de acuerdo con la <a class="underline underline-offset-1" href="https://mailchimp.com/legal/terms" target="_blank">política de privacidad</a>.</p>
     <p class="font-bold pt-3 sm:pt-12 lg:txt-xl text-lg">{{ error }}</p>
   </div>
   

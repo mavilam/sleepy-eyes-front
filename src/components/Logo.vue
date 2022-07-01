@@ -1,6 +1,6 @@
 <template>
   <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    class="w-9/12 xl:w-4/12 lg:w-6/12 basis-2/5 lg:basis-4/6" viewBox="0, 0, 400,230">
+    viewBox="0, 0, 400,230">
     <g id="svgg">
       <path id="path0"
         d="M207.833 203.695 C 206.347 204.691,206.212 206.271,207.504 207.542 C 209.412 209.419,211.611 207.623,210.833 204.821 C 210.464 203.495,208.969 202.934,207.833 203.695 "
