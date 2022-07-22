@@ -9,7 +9,7 @@
           </path>
         </svg>
       </a>
-      <a href="https://twitter.com/sleepye_eyes" target="_blank" class="m-6 text-gray">
+      <a href="https://twitter.com/__sleepyeyes" target="_blank" class="m-6 text-gray">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="w-5" role="img"
           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path fill="currentColor"
