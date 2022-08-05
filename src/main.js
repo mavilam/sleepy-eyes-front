@@ -3,4 +3,6 @@ import App from './App.vue'
 import './index.css'
 import router from './router'
 
-createApp(App).use(router).mount('#app')
+var app = createApp(App)
+app.config.globalProperties.colorArray = ['text-blue', 'text-green', 'text-orange', 'text-purple', 'text-brown', 'text-olive']
+app.use(router).mount('#app')

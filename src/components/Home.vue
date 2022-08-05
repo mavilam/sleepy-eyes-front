@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import {pickRandomColor} from '../composables/colorManagement'
+
 import Content from './Content.vue'
 import Footer from './Footer.vue'
 
@@ -17,7 +19,6 @@ export default {
   },
   data() {
     return {
-      colorArray: ['text-blue', 'text-green', 'text-orange', 'text-purple', 'text-brown', 'text-olive'],
       color: 'green',
       bgColor: 'bg-green'
     }
@@ -28,9 +29,7 @@ export default {
       document.documentElement.style.setProperty('--vh', `${vh}px`)
     },
     changeColor: function() {
-      let random = Math.floor(Math.random() * this.colorArray.length)
-      this.color = `${this.colorArray[random]}`
-      console.log(this.color)
+      this.color = `${pickRandomColor(this.colorArray)}`
       this.setBgColor()
     },
     setBgColor: function() {
