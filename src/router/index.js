@@ -4,7 +4,7 @@ import Post from "../components/Post.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "",
     name: "Home",
     component: Home,
   },
