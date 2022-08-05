@@ -7,7 +7,7 @@
 		<article class="max-w-3xl px-6 py-5 mx-auto space-y-6">
 			<p class="text-xs font-semibold tracking-wider uppercase">#fuckfastfashion</p>
 			<div class="w-full mx-auto space-y-4">
-				<h1 class="text-4xl font-bold leading-tight md:text-5xl">¿Cómo se fabrica la Original Eye tee?</h1>
+				<h1 class="text-4xl font-bold leading-tight md:text-5xl">¿Cómo se fabrica la Original Eye Tee?</h1>
 			</div>
 			<div class="dark:text-gray-100 text-justify">
 				<p>La camiseta parte de la idea de vestir prendas de alta calidad, que hayan sido fabricadas de la manera más
