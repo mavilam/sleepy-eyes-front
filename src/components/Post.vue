@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col justify-center items-center pb-5" :class="color">
-		<logo class="pt-3 w-1/6 xl:w-1/12 lg:w-3/12 cursor-pointer" @click="backToHome()"></logo>
+		<Eye class="w-1/6 xl:w-1/12 lg:w-1/12 cursor-pointer" @click="backToHome()"></Eye>
 		<div class="relative flex py-2 items-center w-full">
 			<div class="flex-grow border-t border-gray-400"></div>
 		</div>
@@ -80,7 +80,7 @@
 </template>
 
 <script>
-	import Logo from './Logo.vue'
+	import Eye from './Eye.vue'
 	import Footer from './Footer.vue'
 
 	import {
@@ -90,7 +90,7 @@
 	export default {
 		name: 'Post',
 		components: {
-			Logo,
+			Eye,
 			Footer
 		},
 		data() {
