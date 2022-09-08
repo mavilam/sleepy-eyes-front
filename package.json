@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "tailwindcss-percentage-width": "^1.0.3",
     "vue": "^3.2.25",
     "vue-router": "^4.1.2",
     "vue-spinner": "^1.0.4"

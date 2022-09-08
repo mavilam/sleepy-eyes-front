@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-col justify-center items-center pb-5" :class="color">
-		<Eye class="w-1/6 xl:w-1/12 lg:w-1/12 cursor-pointer" @click="backToHome()"></Eye>
-		<div class="relative flex py-2 items-center w-full">
+		<Eye class="w-1/6 2xl:w-4% xl:w-1/12 lg:w-1/12 md:w-1/12 cursor-pointer pb-1" @click="backToHome()"></Eye>
+		<div class="relative flex pb-2 items-center w-full">
 			<div class="flex-grow border-t border-gray-400"></div>
 		</div>
 		<article class="max-w-3xl px-6 py-5 mx-auto space-y-6">

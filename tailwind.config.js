@@ -1,3 +1,5 @@
+const percentageWidth = require('tailwindcss-percentage-width')
+
 module.exports = {
   content: [
     "./index.html",
@@ -18,5 +20,7 @@ module.exports = {
       'purple': '#8f6593',
     }
   },
-  plugins: [],
+  plugins: [
+    percentageWidth,
+  ],
 }
