@@ -39,7 +39,7 @@ export default {
     },
     data() {
       return {
-        evadeCorsURL: 'https://cors-server.fly.dev/',
+        evadeCorsURL: 'https://api.allorigins.win/get?url=',
         mailChimpBaseUrl: 'https://xyz.us11.list-manage.com/subscribe/post?u=554bac955bf742500ebe1bf7f&amp;id=bdb9294df2',
         subEmail: '',
         bgColorsCatalog: ['bg-blue', 'bg-green', 'bg-orange', 'bg-purple', 'bg-brown', 'bg-olive'],
@@ -59,7 +59,7 @@ export default {
       suscribe() {
         if (this.subEmail === '') return
         this.isSuscribing = true
-        axios.get(`${this.evadeCorsURL}${this.mailChimpBaseUrl}`, {
+        axios.get(`${this.evadeCorsURL}${encodeURIComponent(this.mailChimpBaseUrl)}`, {
           params: {
             EMAIL: encodeURI(this.subEmail)
           }
