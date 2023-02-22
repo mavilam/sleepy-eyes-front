@@ -19,10 +19,14 @@ const routes = [
     name: "Gallery",
     component: Gallery,
   },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/",
+  }  
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 
